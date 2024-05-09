@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         
     - name: Build the Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/DjangoApp .
+      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/app .
 
     - name: Push the Docker image
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/DjangoApp
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/app
